@@ -1,5 +1,6 @@
 {
   "__schema": {
+    "description": null,
     "queryType": {
       "name": "Query"
     },
@@ -11,11 +12,11 @@
       {
         "kind": "OBJECT",
         "name": "Query",
-        "description": null,
+        "description": "",
         "fields": [
           {
             "name": "authUrl",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -31,7 +32,7 @@
           },
           {
             "name": "user",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "id",
@@ -54,6 +55,106 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "User",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "listing",
+            "description": "",
+            "args": [
+              {
+                "name": "id",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Listing",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "listings",
+            "description": "",
+            "args": [
+              {
+                "name": "location",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "filter",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "ENUM",
+                    "name": "ListingsFilter",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "limit",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "page",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Listings",
                 "ofType": null
               }
             },
@@ -87,13 +188,23 @@
         "possibleTypes": null
       },
       {
+        "kind": "SCALAR",
+        "name": "Int",
+        "description": "The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "OBJECT",
         "name": "User",
-        "description": null,
+        "description": "",
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -109,7 +220,7 @@
           },
           {
             "name": "name",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -125,7 +236,7 @@
           },
           {
             "name": "avatar",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -141,7 +252,7 @@
           },
           {
             "name": "contact",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -157,7 +268,7 @@
           },
           {
             "name": "hasWallet",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -173,7 +284,7 @@
           },
           {
             "name": "income",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -185,7 +296,7 @@
           },
           {
             "name": "bookings",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "limit",
@@ -226,7 +337,7 @@
           },
           {
             "name": "listings",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "limit",
@@ -286,23 +397,13 @@
         "possibleTypes": null
       },
       {
-        "kind": "SCALAR",
-        "name": "Int",
-        "description": "The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.",
-        "fields": null,
-        "inputFields": null,
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
         "kind": "OBJECT",
         "name": "Bookings",
-        "description": null,
+        "description": "",
         "fields": [
           {
             "name": "total",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -318,7 +419,7 @@
           },
           {
             "name": "result",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -349,11 +450,11 @@
       {
         "kind": "OBJECT",
         "name": "Booking",
-        "description": null,
+        "description": "",
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -369,7 +470,7 @@
           },
           {
             "name": "listing",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -385,7 +486,7 @@
           },
           {
             "name": "tenant",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -401,7 +502,7 @@
           },
           {
             "name": "checkIn",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -417,7 +518,7 @@
           },
           {
             "name": "checkOut",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -440,11 +541,11 @@
       {
         "kind": "OBJECT",
         "name": "Listing",
-        "description": null,
+        "description": "",
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -460,7 +561,7 @@
           },
           {
             "name": "title",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -476,7 +577,7 @@
           },
           {
             "name": "description",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -492,7 +593,7 @@
           },
           {
             "name": "image",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -508,7 +609,7 @@
           },
           {
             "name": "host",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -524,7 +625,7 @@
           },
           {
             "name": "type",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -540,7 +641,39 @@
           },
           {
             "name": "address",
-            "description": null,
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "country",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "admin",
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -556,7 +689,7 @@
           },
           {
             "name": "city",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -572,7 +705,7 @@
           },
           {
             "name": "bookings",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "limit",
@@ -613,7 +746,7 @@
           },
           {
             "name": "bookingsIndex",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -629,7 +762,7 @@
           },
           {
             "name": "price",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -645,7 +778,7 @@
           },
           {
             "name": "numOfGuests",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -668,20 +801,20 @@
       {
         "kind": "ENUM",
         "name": "ListingType",
-        "description": null,
+        "description": "",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "APARTMENT",
-            "description": null,
+            "description": "",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "HOUSE",
-            "description": null,
+            "description": "",
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -691,11 +824,23 @@
       {
         "kind": "OBJECT",
         "name": "Listings",
-        "description": null,
+        "description": "",
         "fields": [
           {
+            "name": "region",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "total",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -711,7 +856,7 @@
           },
           {
             "name": "result",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -740,13 +885,36 @@
         "possibleTypes": null
       },
       {
+        "kind": "ENUM",
+        "name": "ListingsFilter",
+        "description": "",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "PRICE_LOW_TO_HIGH",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "PRICE_HIGH_TO_LOW",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
         "kind": "OBJECT",
         "name": "Mutation",
-        "description": null,
+        "description": "",
         "fields": [
           {
             "name": "logIn",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "input",
@@ -773,7 +941,7 @@
           },
           {
             "name": "logOut",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -781,6 +949,111 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "Viewer",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "connectStripe",
+            "description": "",
+            "args": [
+              {
+                "name": "input",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "ConnectStripeInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Viewer",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "disconnectStripe",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Viewer",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hostListing",
+            "description": "",
+            "args": [
+              {
+                "name": "input",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "HostListingInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Listing",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "createBooking",
+            "description": "",
+            "args": [
+              {
+                "name": "input",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CreateBookingInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Booking",
                 "ofType": null
               }
             },
@@ -796,12 +1069,12 @@
       {
         "kind": "INPUT_OBJECT",
         "name": "LogInInput",
-        "description": null,
+        "description": "",
         "fields": null,
         "inputFields": [
           {
             "name": "code",
-            "description": null,
+            "description": "",
             "type": {
               "kind": "NON_NULL",
               "name": null,
@@ -821,11 +1094,11 @@
       {
         "kind": "OBJECT",
         "name": "Viewer",
-        "description": null,
+        "description": "",
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -837,7 +1110,7 @@
           },
           {
             "name": "token",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -849,7 +1122,7 @@
           },
           {
             "name": "avatar",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -861,7 +1134,7 @@
           },
           {
             "name": "hasWallet",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -873,7 +1146,7 @@
           },
           {
             "name": "didRequest",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -894,10 +1167,256 @@
         "possibleTypes": null
       },
       {
+        "kind": "INPUT_OBJECT",
+        "name": "ConnectStripeInput",
+        "description": "",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "code",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "HostListingInput",
+        "description": "",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "title",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "description",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "image",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "type",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "ListingType",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "price",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "numOfGuests",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "CreateBookingInput",
+        "description": "",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "id",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "source",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "checkIn",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "checkOut",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "CacheControlScope",
+        "description": "",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "PUBLIC",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "PRIVATE",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Upload",
+        "description": "The `Upload` scalar type represents a file upload.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "OBJECT",
         "name": "__Schema",
         "description": "A GraphQL Schema defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, as well as the entry points for query, mutation, and subscription operations.",
         "fields": [
+          {
+            "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
           {
             "name": "types",
             "description": "A list of all types supported by this server.",
@@ -995,7 +1514,7 @@
       {
         "kind": "OBJECT",
         "name": "__Type",
-        "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
+        "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name, description and optional `specifiedByUrl`, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
         "fields": [
           {
             "name": "kind",
@@ -1027,6 +1546,18 @@
           },
           {
             "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "specifiedByUrl",
             "description": null,
             "args": [],
             "type": {
@@ -1199,7 +1730,7 @@
           },
           {
             "name": "INTERFACE",
-            "description": "Indicates this type is an interface. `fields` and `possibleTypes` are valid fields.",
+            "description": "Indicates this type is an interface. `fields`, `interfaces`, and `possibleTypes` are valid fields.",
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -1511,6 +2042,22 @@
             "deprecationReason": null
           },
           {
+            "name": "isRepeatable",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "locations",
             "description": null,
             "args": [],
@@ -1688,45 +2235,13 @@
           }
         ],
         "possibleTypes": null
-      },
-      {
-        "kind": "ENUM",
-        "name": "CacheControlScope",
-        "description": null,
-        "fields": null,
-        "inputFields": null,
-        "interfaces": null,
-        "enumValues": [
-          {
-            "name": "PUBLIC",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "PRIVATE",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "possibleTypes": null
-      },
-      {
-        "kind": "SCALAR",
-        "name": "Upload",
-        "description": "The `Upload` scalar type represents a file upload.",
-        "fields": null,
-        "inputFields": null,
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
       }
     ],
     "directives": [
       {
         "name": "cacheControl",
-        "description": null,
+        "description": "",
+        "isRepeatable": false,
         "locations": [
           "FIELD_DEFINITION",
           "OBJECT",
@@ -1758,6 +2273,7 @@
       {
         "name": "skip",
         "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
+        "isRepeatable": false,
         "locations": [
           "FIELD",
           "FRAGMENT_SPREAD",
@@ -1783,6 +2299,7 @@
       {
         "name": "include",
         "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
+        "isRepeatable": false,
         "locations": [
           "FIELD",
           "FRAGMENT_SPREAD",
@@ -1808,6 +2325,7 @@
       {
         "name": "deprecated",
         "description": "Marks an element of a GraphQL schema as no longer supported.",
+        "isRepeatable": false,
         "locations": [
           "FIELD_DEFINITION",
           "ENUM_VALUE"
@@ -1815,7 +2333,7 @@
         "args": [
           {
             "name": "reason",
-            "description": "Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax (as specified by [CommonMark](https://commonmark.org/).",
+            "description": "Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by [CommonMark](https://commonmark.org/).",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -1826,8 +2344,33 @@
         ]
       },
       {
+        "name": "specifiedBy",
+        "description": "Exposes a URL that specifies the behaviour of this scalar.",
+        "isRepeatable": false,
+        "locations": [
+          "SCALAR"
+        ],
+        "args": [
+          {
+            "name": "url",
+            "description": "The URL that specifies the behaviour of this scalar.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ]
+      },
+      {
         "name": "client",
         "description": "Direct the client to resolve this field locally, either from the cache or local resolvers.",
+        "isRepeatable": false,
         "locations": [
           "FIELD",
           "FRAGMENT_DEFINITION",
@@ -1849,6 +2392,7 @@
       {
         "name": "export",
         "description": "Export this locally resolved field as a variable to be used in the remainder of this query. See\nhttps://www.apollographql.com/docs/react/essentials/local-state/#using-client-fields-as-variables",
+        "isRepeatable": false,
         "locations": [
           "FIELD"
         ],
@@ -1872,6 +2416,7 @@
       {
         "name": "connection",
         "description": "Specify a custom store key for this result. See\nhttps://www.apollographql.com/docs/react/advanced/caching/#the-connection-directive",
+        "isRepeatable": false,
         "locations": [
           "FIELD"
         ],
